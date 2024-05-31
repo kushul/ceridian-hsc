@@ -1,9 +1,20 @@
 import { type Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
+import colors from 'tailwindcss/colors'
 
 export default {
   content: ['./src/**/*.{js,jsx,mdx,ts,tsx}'],
   theme: {
+    colors: {
+      dayforce: {
+        light: '#3fbaeb',
+        DEFAULT: '#3067db',
+        dark: '#0c87b8',
+      },
+      neutral: colors.neutral,
+      white: colors.white,
+      ...defaultTheme.colors,
+    },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.5rem' }],
