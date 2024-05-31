@@ -1,1 +1,3 @@
 # ceridian-hsc
+
+setup
