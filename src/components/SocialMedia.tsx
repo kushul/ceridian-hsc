@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 function FacebookIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+    <svg fill='white' viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -15,7 +15,7 @@ function FacebookIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 function InstagramIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+    <svg fill='white' viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -27,7 +27,7 @@ function InstagramIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+    <svg fill='white' viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -39,7 +39,7 @@ function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 function DribbbleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+    <svg fill='white' viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

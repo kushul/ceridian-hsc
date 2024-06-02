@@ -42,7 +42,7 @@ function Clients() {
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
             We’ve worked with hundreds of amazing people
           </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
+          <div className="h-px flex-auto bg-white" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
@@ -206,7 +206,7 @@ function Values() {
 
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Ceridian is now Dayforce. Read more about our commitment to make work life better.',
 }
 
 export default async function Home() {
