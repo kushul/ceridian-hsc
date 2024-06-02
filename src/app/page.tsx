@@ -10,7 +10,7 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
+import logoFamilyFund from '@/images/clients/family-fund/logomark-dark.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
 import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
@@ -19,7 +19,10 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import logoDayforce from '@/images/dayforce.svg'
+import { GridList, GridListItem } from '@/components/GridList'
+import { GridPattern } from '@/components/GridPattern'
+// import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -30,6 +33,63 @@ const clients = [
   ['Green Life', logoGreenLife],
   ['Bright Path', logoBrightPath],
   ['North Adventures', logoNorthAdventures],
+]
+
+export const caseStudies: CaseStudy[] = [
+  {
+    title: 'Introduction to programming',
+  },
+  {
+    title: 'Computer Fundamentals',
+  },
+  {
+    title: 'DBMS',
+  },
+  {
+    title: 'Data Structures and Algorithms',
+  },
+  {
+    title: 'Object Oriented Design and Programming',
+  },
+  {
+    title: 'Business Skills for IT Professionals',
+  },
+  {
+    title: 'Design Thinking and Interactive System Design',
+  },
+  {
+    title: 'Web and Mobile Application Development',
+  },
+  {
+    title: 'Software Engineering(include software development lifecycle)',
+  },
+  {
+    title: 'Enterprise Architecture and Systems',
+  },
+  {
+    title: 'Introduction to Data Science',
+  },
+  {
+    title: 'Software Testing',
+  },
+  {
+    title: 'Machine Learning and Deep Learning',
+  },
+  {
+    title: 'Design Patterns',
+  },
+  {
+    title: 'Software Security',
+  },
+  {
+    title: 'Entrepreneurship and Innovation',
+  },
+  {
+    title: 'AI Applications',
+  },
+  {
+    title: 'Software Project Management',
+  },
 ]
 
 function Clients() {
@@ -61,15 +121,16 @@ function Clients() {
   )
 }
 
-function CaseStudies({
-  caseStudies,
-}: {
-  caseStudies: Array<MDXEntry<CaseStudy>>
-}) {
+export interface CaseStudy {
+  title: string
+}
+
+function CaseStudies() {
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="A glimpse into the syllabus
+        "
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -81,36 +142,23 @@ function CaseStudies({
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+            <FadeIn key="/" className="flex">
+              <article className="relative flex w-full flex-col rounded-3xl p-4 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
                 <h3>
-                  <Link href={caseStudy.href}>
+                  <Link href="/">
                     <span className="absolute inset-0 rounded-3xl" />
                     <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
+                      src={logoFamilyFund}
+                      alt="svg"
+                      width={36}
+                      height={36}
                       unoptimized
                     />
                   </Link>
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time
-                    dateTime={caseStudy.date.split('-')[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+
+                <p className="mt-6 text-center font-display text-2xl font-semibold text-neutral-950">
                   {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
                 </p>
               </article>
             </FadeIn>
@@ -125,8 +173,9 @@ function Services() {
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        eyebrow="Benefits"
+        title="Proposed Model
+        "
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
@@ -146,29 +195,69 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title="Immediate Employment">
+              after the successful completion of the Higher School Certificate
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Earn an attractive stipend">
+              at the start of your career
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="Study at your own pace">
+              , complete your degree in less than 3 years and speed up your
+              progression
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Acquire on the job experiences">
+              experiences as from Day 1
+            </ListItem>
+            <ListItem title="Coaching and mentoring">
+              from recognized professionals from Day 1
+            </ListItem>
+            <ListItem title=" Exposure to international operations">
+              with unique career opportunities and access to innovative
+              technology
+            </ListItem>
+            <ListItem title="Exposure to diverse and multicultural">
+              working environments with travel opportunities
             </ListItem>
           </List>
         </div>
       </Container>
     </>
+  )
+}
+
+function Values() {
+  return (
+    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
+        <GridPattern
+          className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+          yOffset={-270}
+        />
+      </div>
+
+      <SectionIntro
+        title="A glimpse into the syllabus
+        "
+      >
+        <p>
+          We strive to stay at the forefront of emerging trends and
+          technologies, while completely ignoring them and forking that old
+          Rails project we feel comfortable using. We stand by our core values
+          to justify that decision.
+        </p>
+      </SectionIntro>
+
+      <Container className="mt-24">
+        <GridList>
+          {caseStudies.map((caseStudy) => (
+            <GridListItem
+              key={caseStudy.title}
+              title={caseStudy.title}
+            ></GridListItem>
+          ))}
+        </GridList>
+      </Container>
+    </div>
   )
 }
 
@@ -178,14 +267,18 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
-
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
+      <Container className="mt-16 sm:mt-20 md:mt-28">
         <FadeIn className="max-w-3xl">
+          <Image
+            src={logoDayforce}
+            alt="Dayforce"
+            className="w-28 pb-8"
+            unoptimized
+          />
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+            Shortcut to Success for School Leavers
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
             We are a development studio working at the intersection of design
@@ -195,22 +288,25 @@ export default async function Home() {
         </FadeIn>
       </Container>
 
-      <Clients />
+      {/* <CaseStudies caseStudies={caseStudies} /> */}
+      <Values />
+      <ContactSection />
 
-      <CaseStudies caseStudies={caseStudies} />
-
-      <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
-      >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
+      <Testimonial className="mt-24 sm:mt-32 lg:mt-40">
+        Having partnered with the University of Mauritius, Ceridian is offering
+        a unique pathway to Mauritian Higher School Leavers who wish to
+        kickstart their professional careers at the same time as they are
+        embarking on their tertiary studies. By eliminating the financial burden
+        placed on parents thanks to the Ceridian Scholarship, students can fully
+        concentrate on their course, at their own pace, whilst acquiring paid
+        on-the-job experience. At the end of the course, the graduates will be
+        offered a job at Ceridian to advance their careers, making the Ceridian
+        Bridge to Success a win-win formula for everyone involved.
       </Testimonial>
 
       <Services />
 
-      <ContactSection />
+      {/* <Clients /> */}
     </>
   )
 }

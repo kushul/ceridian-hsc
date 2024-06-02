@@ -27,12 +27,10 @@ export function GridList({
 
 export function GridListItem({
   title,
-  children,
   className,
   invert = false,
 }: {
   title: string
-  children: React.ReactNode
   className?: string
   invert?: boolean
 }) {
@@ -40,14 +38,15 @@ export function GridListItem({
     <li
       className={clsx(
         'text-base',
-        invert
-          ? 'text-neutral-300 before:bg-white after:bg-white/10'
-          : 'text-neutral-600 before:bg-neutral-950 after:bg-neutral-100',
+
         className,
       )}
     >
       <FadeIn>
-        <Border position="left" className="pl-8" invert={invert}>
+        <Border
+          position="left"
+          className="pl-8 text-neutral-600 before:bg-dayforce after:bg-neutral-100"
+        >
           <strong
             className={clsx(
               'font-semibold',
@@ -56,7 +55,6 @@ export function GridListItem({
           >
             {title}.
           </strong>{' '}
-          {children}
         </Border>
       </FadeIn>
     </li>
