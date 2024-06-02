@@ -126,12 +126,7 @@ function Services() {
 function Values() {
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
-        <GridPattern
-          className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
-          yOffset={-270}
-        />
-      </div>
+
 
       <SectionIntro
         title="A glimpse into the syllabus
@@ -160,12 +155,14 @@ export default async function Home() {
       <Container className="mt-16 sm:mt-20 md:mt-28">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Shortcut to Success for School Leavers
+            Shortcut <br />
+            to Success for <br /> School Leavers
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+            A unique program to advanced your career alongside your tertiary education
+          </p>
+          <p className="mt-6 text-xl text-neutral-600">
+            Secure your first job right after high school and embark on your degree journey at the same time
           </p>
         </FadeIn>
       </Container>

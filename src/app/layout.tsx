@@ -6,8 +6,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Studio',
-    default: 'Studio - Award winning developer studio based in Denmark',
+    template: 'Dayforce',
+    default: 'Dayforce is the global people platform that delivers simplicity at scale, with payroll, HR, benefits, talent, and workforce management all in one place. Learn more.',
   },
 }
 
