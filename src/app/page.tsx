@@ -63,9 +63,62 @@ function Clients() {
   )
 }
 
-export interface CaseStudy {
-  title: string
-}
+export const syllabus = [
+  {
+    title: 'Introduction to programming',
+  },
+  {
+    title: 'Computer Fundamentals',
+  },
+  {
+    title: 'DBMS',
+  },
+  {
+    title: 'Data Structures and Algorithms',
+  },
+  {
+    title: 'Object Oriented Design and Programming',
+  },
+  {
+    title: 'Business Skills for IT Professionals',
+  },
+  {
+    title: 'Design Thinking and Interactive System Design',
+  },
+  {
+    title: 'Web and Mobile Application Development',
+  },
+  {
+    title: 'Software Engineering(include software development lifecycle)',
+  },
+  {
+    title: 'Enterprise Architecture and Systems',
+  },
+  {
+    title: 'Introduction to Data Science',
+  },
+  {
+    title: 'Software Testing',
+  },
+  {
+    title: 'Machine Learning and Deep Learning',
+  },
+  {
+    title: 'Design Patterns',
+  },
+  {
+    title: 'Software Security',
+  },
+  {
+    title: 'Entrepreneurship and Innovation',
+  },
+  {
+    title: 'AI Applications',
+  },
+  {
+    title: 'Software Project Management',
+  },
+]
 
 function Services() {
   return (
@@ -126,8 +179,6 @@ function Services() {
 function Values() {
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
-
-
       <SectionIntro
         title="A glimpse into the syllabus
         "
@@ -139,7 +190,16 @@ function Values() {
           to justify that decision.
         </p>
       </SectionIntro>
-
+      <Container className="mt-24">
+        <GridList>
+          {syllabus.map((caseStudy) => (
+            <GridListItem
+              key={caseStudy.title}
+              title={caseStudy.title}
+            ></GridListItem>
+          ))}
+        </GridList>
+      </Container>
     </div>
   )
 }
@@ -159,10 +219,12 @@ export default async function Home() {
             to Success for <br /> School Leavers
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            A unique program to advanced your career alongside your tertiary education
+            A unique program to advanced your career alongside your tertiary
+            education
           </p>
           <p className="mt-6 text-xl text-neutral-600">
-            Secure your first job right after high school and embark on your degree journey at the same time
+            Secure your first job right after high school and embark on your
+            degree journey at the same time
           </p>
         </FadeIn>
       </Container>
