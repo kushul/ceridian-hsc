@@ -4,14 +4,16 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+import Image from 'next/image'
+import logoDayforce from '@/images/dayforce.svg'
 
 const navigation = [
   {
     title: 'Work',
     links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
+      { title: 'FamilyFund', href: '#' },
+      { title: 'Unseal', href: '#' },
+      { title: 'Phobia', href: '#' },
       {
         title: (
           <>
@@ -25,10 +27,10 @@ const navigation = [
   {
     title: 'Company',
     links: [
-      { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
-      { title: 'Contact us', href: '/contact' },
+      { title: 'About', href: '#' },
+      { title: 'Process', href: '#' },
+      { title: 'Blog', href: '#' },
+      { title: 'Contact us', href: '#' },
     ],
   },
   {
@@ -122,10 +124,15 @@ export function Footer() {
         </div>
         <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
           <Link href="/" aria-label="Home">
-            <Logo className="h-8" fillOnHover />
+            <Image
+              src={logoDayforce}
+              alt="Dayforce"
+              className="w-32"
+              unoptimized
+            />
           </Link>
           <p className="text-sm text-neutral-700">
-            © Studio Agency Inc. {new Date().getFullYear()}
+            © Dayforce {new Date().getFullYear()}
           </p>
         </div>
       </FadeIn>

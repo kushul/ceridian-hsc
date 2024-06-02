@@ -20,6 +20,8 @@ import { GridPattern } from '@/components/GridPattern'
 import { Logo, Logomark } from '@/components/Logo'
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
+import Image from 'next/image'
+import logoDayforce from '@/images/dayforce.svg'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
@@ -67,21 +69,19 @@ function Header({
           href="/"
           aria-label="Home"
           onMouseEnter={() => setLogoHovered(true)}
-          onMouseLeave={() => setLogoHovered(false)}
+          onMouseLeave={() => setLogoHovered(false)
+          }
+          className="flex items-center"
         >
-          <Logomark
-            className="h-8 sm:hidden"
-            invert={invert}
-            filled={logoHovered}
-          />
-          <Logo
-            className="hidden h-8 sm:block"
-            invert={invert}
-            filled={logoHovered}
+          <Image
+            src={logoDayforce}
+            alt="Dayforce"
+            className="w-32"
+            unoptimized
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/contact" invert={invert}>
+          <Button className='bg-dayforce' href="#contact" invert={invert}>
             Contact us
           </Button>
           <button
@@ -181,7 +181,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
-      {/* <header>
+      {<header>
         <div
           className="absolute left-0 right-0 top-2 z-40 pt-14"
           aria-hidden={expanded ? 'true' : undefined}
@@ -251,7 +251,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
             </div>
           </motion.div>
         </motion.div>
-      </header> */}
+      </header>}
 
       <motion.div
         layout

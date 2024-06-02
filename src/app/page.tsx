@@ -22,7 +22,6 @@ import imageLaptop from '@/images/laptop.jpg'
 import logoDayforce from '@/images/dayforce.svg'
 import { GridList, GridListItem } from '@/components/GridList'
 import { GridPattern } from '@/components/GridPattern'
-// import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -33,63 +32,6 @@ const clients = [
   ['Green Life', logoGreenLife],
   ['Bright Path', logoBrightPath],
   ['North Adventures', logoNorthAdventures],
-]
-
-export const caseStudies: CaseStudy[] = [
-  {
-    title: 'Introduction to programming',
-  },
-  {
-    title: 'Computer Fundamentals',
-  },
-  {
-    title: 'DBMS',
-  },
-  {
-    title: 'Data Structures and Algorithms',
-  },
-  {
-    title: 'Object Oriented Design and Programming',
-  },
-  {
-    title: 'Business Skills for IT Professionals',
-  },
-  {
-    title: 'Design Thinking and Interactive System Design',
-  },
-  {
-    title: 'Web and Mobile Application Development',
-  },
-  {
-    title: 'Software Engineering(include software development lifecycle)',
-  },
-  {
-    title: 'Enterprise Architecture and Systems',
-  },
-  {
-    title: 'Introduction to Data Science',
-  },
-  {
-    title: 'Software Testing',
-  },
-  {
-    title: 'Machine Learning and Deep Learning',
-  },
-  {
-    title: 'Design Patterns',
-  },
-  {
-    title: 'Software Security',
-  },
-  {
-    title: 'Entrepreneurship and Innovation',
-  },
-  {
-    title: 'AI Applications',
-  },
-  {
-    title: 'Software Project Management',
-  },
 ]
 
 function Clients() {
@@ -123,50 +65,6 @@ function Clients() {
 
 export interface CaseStudy {
   title: string
-}
-
-function CaseStudies() {
-  return (
-    <>
-      <SectionIntro
-        title="A glimpse into the syllabus
-        "
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key="/" className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-4 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href="/">
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={logoFamilyFund}
-                      alt="svg"
-                      width={36}
-                      height={36}
-                      unoptimized
-                    />
-                  </Link>
-                </h3>
-
-                <p className="mt-6 text-center font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-              </article>
-            </FadeIn>
-          ))}
-        </FadeInStagger>
-      </Container>
-    </>
-  )
 }
 
 function Services() {
@@ -247,16 +145,6 @@ function Values() {
         </p>
       </SectionIntro>
 
-      <Container className="mt-24">
-        <GridList>
-          {caseStudies.map((caseStudy) => (
-            <GridListItem
-              key={caseStudy.title}
-              title={caseStudy.title}
-            ></GridListItem>
-          ))}
-        </GridList>
-      </Container>
     </div>
   )
 }
@@ -271,12 +159,6 @@ export default async function Home() {
     <>
       <Container className="mt-16 sm:mt-20 md:mt-28">
         <FadeIn className="max-w-3xl">
-          <Image
-            src={logoDayforce}
-            alt="Dayforce"
-            className="w-28 pb-8"
-            unoptimized
-          />
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
             Shortcut to Success for School Leavers
           </h1>
@@ -288,7 +170,6 @@ export default async function Home() {
         </FadeIn>
       </Container>
 
-      {/* <CaseStudies caseStudies={caseStudies} /> */}
       <Values />
       <ContactSection />
 
