@@ -63,7 +63,7 @@ function Clients() {
   )
 }
 
-export const syllabus = [
+const syllabus = [
   {
     title: 'Introduction to programming',
   },
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
 export default async function Home() {
   return (
     <>
-      <Container className="mt-16 sm:mt-20 md:mt-28">
+      <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
             Shortcut <br />
